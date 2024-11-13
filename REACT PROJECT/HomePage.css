@@ -1,0 +1,195 @@
+/* Home Page Styles */
+.home-container {
+    background-image: url('https://i.pinimg.com/originals/bc/a1/90/bca19096a0def30ba652264dbce98d88.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    color: white;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Optional: Remove animation since there's no gradient */
+@keyframes gradientAnimation {
+    /* This can be removed if you don't want the gradient animation */
+}
+
+/* Header Section */
+.home-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.home-title {
+    font-size: 4rem;
+    color: #ffffff;
+    animation: slideIn 1.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Meetings Section */
+.meetings-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.meetings-scroll {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 20px;
+    scrollbar-width: thin; /* Firefox */
+}
+
+.meeting-info {
+    background-color: rgba(46, 204, 113, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+    width: 200px; /* Fixed width for each meeting card */
+}
+
+.meeting-info:hover {
+    transform: scale(1.1); /* Increased scaling for hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+    background-color: rgb(253, 132, 4);
+}
+
+.meeting-info img {
+    width: 100%; /* Make image responsive */
+    height: 120px; /* Fixed height for all images */
+    object-fit: cover; /* Cover the area without distortion */
+    border-radius: 10px; /* Less rounding for the image */
+    margin-bottom: 15px;
+}
+
+/* Schedule Meeting Section */
+.schedule-meeting-section {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: rgba(155, 89, 182, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.schedule-meeting-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.schedule-meeting-section input {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Schedule Button */
+.schedule-button {
+    padding: 12px 20px;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-button:hover {
+    background-color: #ff1100;
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s forwards; /* Slide in animation */
+}
+
+/* Close Modal Button */
+.close-modal {
+    background-color: #ff1100;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: #ff3300; /* Change color on hover */
+}
+
+/* Navigation Button Styles */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.navigation-buttons button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:disabled {
+    background-color: #ccc; /* Gray color for disabled buttons */
+    cursor: not-allowed;
+}
+
+.navigation-buttons button:hover:not(:disabled) {
+    background-color: #ff1100; /* Change color on hover */
+}
